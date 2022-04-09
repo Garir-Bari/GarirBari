@@ -64,17 +64,17 @@
 
                     <!-- form area -->
 
-                    <form action="signup_process.php", method="POST">
+                    <form action="ParkingOwnerSignupProcess.php", method="GET">
                           <div class="row d-flex justify-content-center">
                               
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                      
-                                        <input type="text" placeholder="Enter your first name", name='fn'>
+                                        <input type="text" placeholder="Enter your name", name='name'>
                                  
                                   </div>
                                   <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
                                   
-                                        <input type="text" placeholder="Enter your last name", name='ln'>
+                                        <input type="text" placeholder="Enter your Email", name='email'>
                                    
                                   </div>
                                </div>
@@ -82,12 +82,12 @@
                                <div class="row d-flex justify-content-center">
                                      <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                         
-                                           <input type="email" placeholder="Enter your Email", name='email'>
+                                           <input type="email" placeholder="Enter your NID Number", name='nid'>
                                     
                                      </div>
                                      <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
                                      
-                                           <input type="text" placeholder="phone number with country code", name='phone'>
+                                           <input type="text" placeholder="Enter phone number", name='phone'>
                                       
                                      </div>
                                   </div>
@@ -97,12 +97,12 @@
                                   <div class="row d-flex justify-content-center">
                                      <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                         
-                                           <input type="email" placeholder="Address", name='addr'>
+                                           <input type="email" placeholder="Enter Address", name='address'>
                                     
                                      </div>
                                      <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
                                      
-                                           <input type="text" placeholder="Car Number Plate", name='car'>
+                                           <input type="text" placeholder="Enter occupation", name='occupation'>
                                       
                                      </div>
                                   </div>
@@ -115,8 +115,8 @@
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                               <select class="cs-select cs-skin-elastic ", name="gender">
                                                  <option value="" disabled selected>Select your Gender</option>
-                                                 <option class="option" value="element_1" data-class="element_1">Male</option>
-                                                 <option value="element_2" data-class="element_2">Female</option>
+                                                 <option class="option" value="male" data-class="element_1">Male</option>
+                                                 <option value="female" data-class="element_2">Female</option>
                                               </select>
                                       
                                   
@@ -127,7 +127,7 @@
                    
                                   <div class="col-xl-6	col-lg-12 col-md-12 ">
                                      <div class="inputBox">
-                                        <input type="password" placeholder="enter password", name="pass">
+                                        <input type="password" placeholder="enter password", name="password">
                                      </div>
                                   </div>
 
@@ -135,7 +135,7 @@
                               
                                     <div class="row mt-4">
                                         <div class="text-center col-12">
-                                           <button class="btn-login">Submit</button>
+                                           <button class="btn-login" type=submit>Submit</button>
                                         </div>
                                     </div>
                             </form>      
