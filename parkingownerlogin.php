@@ -21,13 +21,13 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"
        crossorigin="anonymous"></script>
  <!-- custom css -->
- <link rel="stylesheet" href="css/signup.css">
+ <link rel="stylesheet" href="css/signin.css">
  <link rel="stylesheet" href="css/responsive.css">
- <title>Sign up as a parking owner</title>
+ <title>Sign in as a parking owner</title>
 </head>
 <body>
-          <!-- animations -->
-          <header class="header">
+      <!-- animations -->
+      <header class="header">
             <nav class=" fixed-top ">
                 <div class="container">
                     <div class="wrapper d-flex align-items-center justify-content-between">
@@ -45,7 +45,7 @@
                          
                             
                             <li> <a class="login" href="signup.html">Contact Us</a></li>
-                            <li> <a class="login" href="parkingownerlogin.html">Login</a></li>
+                            
                         </ul>
                         <label for="menu-btn" class="btn menu-btn"> <i class="fas fa-bars"></i> </label>
                     </div>
@@ -55,102 +55,35 @@
 
 
 
-    <!-- news latter section -->
-    <section class="news-latter ">
+
+      <!-- sign in form -->
+<section class="sign-in">
       <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-6 row d-flex justify-content-center card">
-                    <h3>Sign Up as a Parking Owner</h3>
-
-                    <!-- form area -->
-
-                    <form action="ParkingOwnerSignupProcess.php", method="POST">
-                          <div class="row d-flex justify-content-center">
-                              
-                                  <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                     
-                                        <input type="text" placeholder="Enter your name", name='name'>
-                                 
-                                  </div>
-                                  <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
-                                  
-                                        <input type="email" placeholder="Enter your Email", name='email'>
-                                   
-                                  </div>
-                               </div>
-       
-                               <div class="row d-flex justify-content-center">
-                                     <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                        
-                                           <input type="text" placeholder="Enter your NID Number", name='nid'>
-                                    
-                                     </div>
-                                     <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
-                                     
-                                           <input type="text" placeholder="Enter phone number", name='phone'>
-                                      
-                                     </div>
-                                  </div>
-
-                                  
-
-                                  <div class="row d-flex justify-content-center">
-                                     <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                        
-                                           <input type="text" placeholder="Enter Address", name='address'>
-                                    
-                                     </div>
-                                     <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
-                                     
-                                           <input type="text" placeholder="Enter occupation", name='occupation'>
-                                      
-                                     </div>
-                                  </div>
-
-
-                             
-                               <div class="row">
-                                  
-
-                                  <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                              <select class="cs-select cs-skin-elastic ", name="gender">
-                                                 <option value="" disabled selected>Select your Gender</option>
-                                                 <option class="option" value="male" data-class="element_1">Male</option>
-                                                 <option value="female" data-class="element_2">Female</option>
-                                              </select>
-                                      
-                                  
-                                  </div>
-
-
-
-                   
-                                  <div class="col-xl-6	col-lg-12 col-md-12 ">
-                                     <div class="inputBox">
-                                        <input type="password" placeholder="enter password", name="password">
-                                     </div>
-                                  </div>
-
-                               </div>
-                              
-                                    <div class="row mt-4">
-                                        <div class="text-center col-12">
-                                           <button class="btn-login" type=submit>Submit</button>
-                                        </div>
-                                    </div>
-                            </form>      
-                      </div>
-                  <div class="col-6 img fluid text-center">
+                  <div class="col-xl-6 col-xxl-6 col-md-12 col-sm-12 text-center">
                         <img class="img-fluid" src="img/parkingcar.png" alt="">
                   </div>
-                 
+                  <div class="col-xl-6 col-xxl-6 col-md-12 col-sm-12 row d-flex justify-content-center">
+                        <div class="card ">
+                              <h2 class="text-center">Login As Parking Owner</h2>
+                              <form action="#">
+                                <div class="inputBox">
+                                  <input type="text" placeholder="Username">
+                                </div>
+                                <div class="inputBox">
+                                  <input type="password" placeholder="Password">
+                                </div>
+                                <div class="inputBox text-center">
+                                    <button class="btn ">Submit</button>
+                                </div>
+                                <p class="forget">Don't have account ? <a href="parkingownersignup.html">Sign Up</a></p>
+                              </form>
+                            </div>        
+                          </div>
                   </div>
             </div>
-      
-      
-            </section>
-
-
+      </div>
+</section>
 
      <!-- footer area -->
 
@@ -204,7 +137,7 @@
                 </div>
           </div>
           <div class="row">
-                <div class="col-lg-6 col-md-12 col-xl-6 col-xxl-6 col-sm-12 text-secondary row d-flex align-items-end">
+                <div class="col-lg-6 col-md-12 col-xl-6 col-xxl-6 col-sm-12 text-secondary row d-flex align-self-end">
                   <p>all @copyright reserved to Romaxdev</p>
                 </div>
                 <div class="col-lg-6 col-md-12 col-xl-6 col-xxl-6 col-sm-12 text-secondary text-end">
