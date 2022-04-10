@@ -1,14 +1,13 @@
 <?php 
     require_once('db_connect.php');
 
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $user_name = $_POST['user_name'];
-    $address = $_POST['address'];
-    $gender = $_POST['gender'];
-    $contact = $_POST['contact'];
+    $name = $_POST['name'];
     $email = $_POST['email'];
-    $postal_code = $_POST['postal_code'];
+    $nid = $_POST['nid'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $occupation = $_POST['occupation'];
+    $gender = $_POST['gender'];
     $password = $_POST['password'];
 
     $query = "INSERT INTO job_seeker (first_name, last_name, user_name, gender, address, contact, email, postal_code, pass, status) 
