@@ -10,8 +10,8 @@
     $gender = $_POST['gender'];
     $password = $_POST['password'];
 
-    $query = "INSERT INTO job_seeker (first_name, last_name, user_name, gender, address, contact, email, postal_code, pass, status) 
-    VALUES('$first_name', '$last_name', '$user_name', '$gender', '$address', '$contact', '$email', '$postal_code', '$password', 'pending');";
+    $query = "INSERT INTO parking_owner (id, email, pass,  name, nid, contact, address, occupation, gender,  status) 
+    VALUES('', '$email', '$password', '$name', '$nid', '$contact', '$address', '$occupation', '$gender', 'pending');";
 
     $create_query = mysqli_query($conn,$query);
 
