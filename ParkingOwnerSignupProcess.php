@@ -13,7 +13,7 @@
     $query = "INSERT INTO parking_owner (id, email, pass,  name, nid, contact, address, occupation, gender,  status) 
     VALUES('', '$email', '$password', '$name', '$nid', '$contact', '$address', '$occupation', '$gender', 'pending');";
 
-    $create_query = mysqli_query($conn,$query);
+    $execute_query = mysqli_query($conn,$query);
 
     if($create_query){
         $job_seeker_Details = "SELECT * FROM `job_seeker` WHERE user_name = '$user_name';" ;
@@ -25,10 +25,6 @@
         if($job_seeker_data['status']=='pending'){
             //echo "admin not confirmed yet";
             header("Location: ../skill_test_varrified/index.php");
-        }else{
-            
-            //echo "confirm";
-            header("Location: ../job_seeker_login/skill_test_varrified/index.php");
         }
     }else{
         echo "unsuccessfull";
