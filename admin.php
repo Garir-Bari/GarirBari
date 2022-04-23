@@ -25,6 +25,9 @@
 </head>
 
 <body id="page-top">
+<?php 
+    require_once('db_connect.php');
+?>
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -375,7 +378,7 @@
                                                 Car Owner / Driver</div>
                                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                     Accounts Approval Pending</div>
-                                            <button class="h5 mb-0 font-weight-bold text-gray-800 " type="submit">18</button>
+                                            <button class="h5 mb-0 font-weight-bold text-gray-800 " type="submit">0</button>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -393,6 +396,12 @@
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Parking Owner </div>
                                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    <?php
+                                                        $POquery = "SELECT COUNT(id) FROM `parking_owner` WHERE `status`='pending';";
+                                                        $POexecute_query = mysqli_query($conn,$POquery);
+                                                        $PO_Account_Pending = mysqli_num_rows($POexecute_query);
+                                                        //echo $PO_Account_Pending;
+                                                    ?>
                                                     Accounts Approval Pending</div>
                                                     <button class="h5 mb-0 font-weight-bold text-gray-800 " type="submit">
                                                         <a href="ParkingOwnerApproval.html">18</a>
