@@ -404,7 +404,7 @@
                                                     ?>
                                                     Accounts Approval Pending</div>
                                                     <button class="h5 mb-0 font-weight-bold text-gray-800 " type="submit">
-                                                        <a href="ParkingOwnerApproval.html">18</a>
+                                                        <a href="ParkingOwnerApproval.html"><?php echo $PO_Account_Pending; ?></a>
                                                         </button>
                                         </div>
                                         <div class="col-auto">
