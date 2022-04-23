@@ -13,7 +13,8 @@
     $count=mysqli_num_rows($execute_query);
 
     if ($count > 0){
-        //header('home.html');
+        session_start();
+        $_SESSION['email']=$email;
         ?>
         <script>
             window.location.assign('POHome.php');

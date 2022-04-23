@@ -26,7 +26,12 @@
     <link rel="stylesheet" href="css/responsive.css">
     <title>RomaxDev</title>
 </head>
+<?php
+    session_start();
 
+
+    if(isset($_SESSION['email']) && !empty($_SESSION['email'])){
+        $email = $_SESSION['email']; ?>
 <body>
     <!-- animations -->
     <header class="header">
@@ -78,7 +83,7 @@
             </div>
         </nav>
     </header>
-
+    <!-- PHP start -->
 
     <!-- hero section -->
     <section class="bc">
@@ -345,5 +350,17 @@
     <script src="style.js"></script>
 
 </body>
+<?php
+    }
+
+    else{
+        ///session doesn't contain any valid user email
+        ?>
+            <script>
+                window.location.assign('parkingownerlogin.php');
+            </script>
+        <?php
+    }
+?>
 
 </html>
