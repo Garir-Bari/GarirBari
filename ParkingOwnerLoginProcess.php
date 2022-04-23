@@ -16,7 +16,7 @@
         //header('home.html');
         ?>
         <script>
-            window.location.assign('home.html');
+            window.location.assign('POHome.php');
         </script>
         <?php
 
