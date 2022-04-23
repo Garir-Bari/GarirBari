@@ -397,7 +397,7 @@
                                                 Parking Owner </div>
                                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                     <?php
-                                                        $POquery = "SELECT COUNT(id) FROM `parking_owner` WHERE `status`='pending';";
+                                                        $POquery = "SELECT * FROM `parking_owner` WHERE `status`='pending';";
                                                         $POexecute_query = mysqli_query($conn,$POquery);
                                                         $PO_Account_Pending = mysqli_num_rows($POexecute_query);
                                                         //echo $PO_Account_Pending;

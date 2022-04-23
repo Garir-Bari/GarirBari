@@ -85,7 +85,8 @@
 						</thead>
                         <?php
                             $query = "SELECT * FROM parking_owner WHERE status = 'pending';";
-                            $result = mysqli_query($conn,$query);
+                            $result = mysqli_query($conn,$query); ?>
+                            <tbody> <?php
                             if($result->num_rows>0){
                                 while($rd = mysqli_fetch_assoc($result)){
                                     $id = $rd['id'];
@@ -95,24 +96,27 @@
                                     $contact = $rd['contact'];
                                     $address = $rd['address'];                                   
                                     $occupation = $rd['occupation'];
-                                    $gender = $rd['gender'];
+                                    $gender = $rd['gender']; ?>
+                                    
+                                    <tr>
+                                        <td class="column1"><?php echo $name; ?></td>
+                                        <td class="column2"><?php echo $email; ?></td>
+                                        <td class="column3"><?php echo $nid; ?></td>
+                                        <td class="column4"><?php echo $address; ?></td>
+                                        <td class="column5"><?php echo $contact; ?></td>
+                                        <td class="column6"><?php echo $occupation; ?></td>
+                                        <td class="column6"><?php echo $gender; ?></td>
+                                        <td class="column6"><a href="POapprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
+                                        <td class="column6"><a href="POreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="reject">Reject</a></td>
+								    </tr>
+                                    
+
+                                <?php
                                 }
-                            }    
+                            }?>
+                            </tbody> <?php   
                         ?>
-						<tbody>
-								<tr>
-									<td class="column1"><?php echo $name; ?></td>
-									<td class="column2"><?php echo $email; ?></td>
-									<td class="column3"><?php echo $nid; ?></td>
-									<td class="column4"><?php echo $address; ?></td>
-									<td class="column5"><?php echo $contact; ?></td>
-									<td class="column6"><?php echo $occupation; ?></td>
-                                    <td class="column6"><?php echo $gender; ?></td>
-                                    <td class="column6"><a href="POapprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
-                                    <td class="column6"><a href="POreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="reject">Reject</a></td>
-								</tr>
-								
-						</tbody>
+						
 					</table>
 				</div>
 			</div>
