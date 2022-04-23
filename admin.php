@@ -19,7 +19,8 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="../css/admin.css" rel="stylesheet">
+    <!-- <link href="../css/admin.css" rel="stylesheet"> -->
+    <link href="css/admin.css" rel="stylesheet">
 
 </head>
 
