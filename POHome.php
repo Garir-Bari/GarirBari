@@ -92,7 +92,7 @@
                     </div> -->
 
                     <p>Add your parking spot here</p>
-                    <button class="btn-grad1"><a href="carownerlogin.html" class="hero1-btn mb-4">Add Here</a></button>
+                    <button class="btn-grad1"><a href="POgarageAdd.php" class="hero1-btn mb-4">Add Here</a></button>
                     
                 </div>
                 <!-- <div class="ideas-item bc-img">
