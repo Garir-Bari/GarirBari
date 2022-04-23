@@ -81,6 +81,16 @@
                                 <th class="column6">Status</th>
 							</tr>
 						</thead>
+                        <?php
+                            $query = "SELECT * FROM parking_owner WHERE status = 'pending';";
+                            $result = mysqli_query($conn,$query);
+                            if($result->num_rows>0){
+                                while($rd = mysqli_fetch_assoc($result)){
+                                    $id = $rd['id'];
+                                    $name = $rd['first_name'];
+                                    $recruiter_last_name = $rd['name'];
+                                    $company = $rd['company_name'];
+                        ?>
 						<tbody>
 								<tr>
 									<td class="column1">Shahadat</td>
