@@ -1,3 +1,6 @@
+<?php 
+    require_once('db_connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,160 +62,35 @@
         </nav>
     </header>
 
-
-    <!-- hero section -->
-    <section class="bc">
-        <div class="container">
-            <div class="ideas-container">
-                <div class="ideas-item abtxt">
-                    <!-- <div class="hero1-h1">Wellcome <span class="true ">Rownok Mahbub</span>
-                        <h1>
-                          To  Your Profile
-                        </h1>
-                    </div> -->
-
-                    <p>Add your parking spot here</p>
-                    <button class="btn-grad1"><a href="carownerlogin.html" class="hero1-btn mb-4">Add Here</a></button>
-                    
-                </div>
-                <!-- <div class="ideas-item bc-img">
-
-                    <img src="img/Rownok.png" style="margin-top: 120px;" alt="">
-
-                </div> -->
-            </div>
-        </div>
-
-    </section>
-
-
     <div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100">
 					<table>
+                        <!-- <p>Parking Owner Pending Account </p> -->
+                        <p style="color:blue;text-align:center;"> Parking Owner Pending Account </p>
 						<thead>
 							<tr class="table100-head">
-								<th class="column1">Date</th>
-								<th class="column2">Order ID</th>
-								<th class="column3">Name</th>
-								<th class="column4">Price</th>
-								<th class="column5">Quantity</th>
-								<th class="column6">Total</th>
+								<th class="column1">Name</th>
+								<th class="column2">Email</th>
+								<th class="column3">NID</th>
+								<th class="column4">Address</th>
+								<th class="column5">Contact</th>
+								<th class="column6">Occupation</th>
+                                <th class="column6">Gender</th>
+                                <th class="column6">Status</th>
 							</tr>
 						</thead>
 						<tbody>
 								<tr>
-									<td class="column1">2017-09-29 01:22</td>
-									<td class="column2">200398</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-28 05:57</td>
-									<td class="column2">200397</td>
-									<td class="column3">Samsung S8 Black</td>
-									<td class="column4">$756.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$756.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-26 05:57</td>
-									<td class="column2">200396</td>
-									<td class="column3">Game Console Controller</td>
-									<td class="column4">$22.00</td>
-									<td class="column5">2</td>
-									<td class="column6">$44.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-25 23:06</td>
-									<td class="column2">200392</td>
-									<td class="column3">USB 3.0 Cable</td>
-									<td class="column4">$10.00</td>
-									<td class="column5">3</td>
-									<td class="column6">$30.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-24 05:57</td>
-									<td class="column2">200391</td>
-									<td class="column3">Smartwatch 4.0 LTE Wifi</td>
-									<td class="column4">$199.00</td>
-									<td class="column5">6</td>
-									<td class="column6">$1494.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-23 05:57</td>
-									<td class="column2">200390</td>
-									<td class="column3">Camera C430W 4k</td>
-									<td class="column4">$699.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$699.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-22 05:57</td>
-									<td class="column2">200389</td>
-									<td class="column3">Macbook Pro Retina 2017</td>
-									<td class="column4">$2199.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$2199.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-21 05:57</td>
-									<td class="column2">200388</td>
-									<td class="column3">Game Console Controller</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-19 05:57</td>
-									<td class="column2">200387</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-18 05:57</td>
-									<td class="column2">200386</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-22 05:57</td>
-									<td class="column2">200389</td>
-									<td class="column3">Macbook Pro Retina 2017</td>
-									<td class="column4">$2199.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$2199.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-21 05:57</td>
-									<td class="column2">200388</td>
-									<td class="column3">Game Console Controller</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-19 05:57</td>
-									<td class="column2">200387</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-18 05:57</td>
-									<td class="column2">200386</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
+									<td class="column1">Shahadat</td>
+									<td class="column2">s@gmail.com</td>
+									<td class="column3">09954578965</td>
+									<td class="column4">100 feet, Natun Bazar</td>
+									<td class="column5">01714488778</td>
+									<td class="column6">Businessman</td>
+                                    <td class="column6">Male</td>
+                                    <td class="column6">pending</td>
 								</tr>
 								
 						</tbody>
