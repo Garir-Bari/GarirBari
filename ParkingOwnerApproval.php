@@ -1,6 +1,7 @@
 <?php 
-    require_once('db_connect.php');
+     require_once('db_connect.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,20 +88,26 @@
                             if($result->num_rows>0){
                                 while($rd = mysqli_fetch_assoc($result)){
                                     $id = $rd['id'];
-                                    $name = $rd['first_name'];
-                                    $recruiter_last_name = $rd['name'];
-                                    $company = $rd['company_name'];
+                                    $email = $rd['email'];
+                                    $name = $rd['name'];
+                                    $nid = $rd['nid'];
+                                    $contact = $rd['contact'];
+                                    $address = $rd['address'];                                   
+                                    $occupation = $rd['occupation'];
+                                    $gender = $rd['gender'];
+                                }
+                            }    
                         ?>
 						<tbody>
 								<tr>
-									<td class="column1">Shahadat</td>
-									<td class="column2">s@gmail.com</td>
-									<td class="column3">09954578965</td>
-									<td class="column4">100 feet, Natun Bazar</td>
-									<td class="column5">01714488778</td>
-									<td class="column6">Businessman</td>
-                                    <td class="column6">Male</td>
-                                    <td class="column6">pending</td>
+									<td class="column1"><?php echo $name; ?></td>
+									<td class="column2"><?php echo $email; ?></td>
+									<td class="column3"><?php echo $nid; ?></td>
+									<td class="column4"><?php echo $address; ?></td>
+									<td class="column5"><?php echo $contact; ?></td>
+									<td class="column6"><?php echo $occupation; ?></td>
+                                    <td class="column6"><?php echo $gender; ?></td>
+                                    <td class="column6"><?php echo $gender; ?></td>
 								</tr>
 								
 						</tbody>
