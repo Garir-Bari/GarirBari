@@ -79,7 +79,8 @@
 								<th class="column5">Contact</th>
 								<th class="column6">Occupation</th>
                                 <th class="column6">Gender</th>
-                                <th class="column6">Status</th>
+                                <th class="column6">Accept</th>
+                                <th class="column6">Reject</th>
 							</tr>
 						</thead>
                         <?php
@@ -107,7 +108,8 @@
 									<td class="column5"><?php echo $contact; ?></td>
 									<td class="column6"><?php echo $occupation; ?></td>
                                     <td class="column6"><?php echo $gender; ?></td>
-                                    <td class="column6"><?php echo $gender; ?></td>
+                                    <td class="column6"><a href="POapprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
+                                    <td class="column6"><a href="POreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="reject">Reject</a></td>
 								</tr>
 								
 						</tbody>
