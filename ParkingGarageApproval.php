@@ -69,46 +69,51 @@
 				<div class="table100">
 					<table>
                         <!-- <p>Parking Owner Pending Account </p> -->
-                        <p style="color:blue;text-align:center;"> Parking Owner Pending Account </p>
+                        <p style="color:blue;text-align:center;"> Parking Garaga/Spot Pending </p>
 						<thead>
 							<tr class="table100-head">
-								<th class="column1">Owner/Caretaker Name</th>
-								<th class="column2">Caretaker NID</th>
+								<th class="column1">Name</th>
+								<th class="column2">NID</th>
 								<th class="column4">Address</th>
 								<th class="column5">Contact</th>
-								<th class="column6">No. of Parking spot</th>
-                                <th class="column6">Rent per hour</th>
+								<th class="column6">No. of spot</th>
+                                <th class="column6">Rent/hour</th>
                                 <th class="column6">Parking start time</th>
                                 <th class="column6">Parking end time</th>
+                                <th class="column6">CCTV</th>
                                 <th class="column6">Accept</th>
                                 <th class="column6">Reject</th>
 							</tr>
 						</thead>
                         <?php
-                            $query = "SELECT * FROM parking_owner WHERE status = 'pending';";
+                            $query = "SELECT * FROM parking_garage WHERE status = 'pending';";
                             $result = mysqli_query($conn,$query); ?>
                             <tbody> <?php
                             if($result->num_rows>0){
                                 while($rd = mysqli_fetch_assoc($result)){
                                     $id = $rd['id'];
-                                    $email = $rd['email'];
-                                    $name = $rd['name'];
-                                    $nid = $rd['nid'];
+                                    $c_name = $rd['c_name'];
+                                    $c_nid = $rd['c_nid'];
                                     $contact = $rd['contact'];
-                                    $address = $rd['address'];                                   
-                                    $occupation = $rd['occupation'];
-                                    $gender = $rd['gender']; ?>
+                                    $p_address = $rd['p_address'];
+                                    $no_of_spot = $rd['no_of_spot'];
+                                    $rent_hour = $rd['rent_hour'];
+                                    $PS_time = $rd['PS_time'];
+                                    $PE_time = $rd['PE_time'];
+                                    $cctv = $rd['cctv']; ?>
                                     
                                     <tr>
-                                        <td class="column1"><?php echo $name; ?></td>
-                                        <td class="column2"><?php echo $email; ?></td>
-                                        <td class="column3"><?php echo $nid; ?></td>
-                                        <td class="column4"><?php echo $address; ?></td>
-                                        <td class="column5"><?php echo $contact; ?></td>
-                                        <td class="column6"><?php echo $occupation; ?></td>
-                                        <td class="column6"><?php echo $gender; ?></td>
-                                        <td class="column6"><a href="POapprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
-                                        <td class="column6"><a href="POreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="reject">Reject</a></td>
+                                        <td class="column1"><?php echo $c_name; ?></td>
+                                        <td class="column2"><?php echo $c_nid; ?></td>
+                                        <td class="column3"><?php echo $p_address; ?></td>
+                                        <td class="column4"><?php echo $contact; ?></td>
+                                        <td class="column5"><?php echo $no_of_spot; ?></td>
+                                        <td class="column6"><?php echo $rent_hour; ?></td>
+                                        <td class="column6"><?php echo $PS_time; ?></td>
+                                        <td class="column6"><?php echo $PE_time; ?></td>
+                                        <td class="column6"><?php echo $cctv; ?></td>
+                                        <td class="column6"><a href="PGapprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
+                                        <td class="column6"><a href="PGreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="reject">Reject</a></td>
 								    </tr>
                                     
 
