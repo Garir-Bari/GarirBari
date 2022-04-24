@@ -178,7 +178,7 @@
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         <td class="column6"><?php echo $status; ?></td>
                                         <?php
-                                            echo "<td> <a href = 'PGedit.php?id=$id&c_name=$c_name&c_nid=$c_nid'> Update </a> </td>";
+                                            echo "<td> <a href = 'PGupdate.php?id=$id&c_name=$c_name&c_nid=$c_nid'> Update </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
                                         <?php
