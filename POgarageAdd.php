@@ -59,11 +59,16 @@
 
                     <!-- form area -->
 
-                    <form action="ParkingOwnerSignupProcess.php", method="POST">
+                    <form action="ParkingOwrocess.php", method="POST">
+                          <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?>> -->
+                          <div class="row">
+                              <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?>">
+                          </div>
                           <div class="row d-flex justify-content-center">
                               
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                     
+
+                                        <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?> >  -->
                                         <input type="text" placeholder="Caretaker name", name='c_name'>
                                  
                                   </div>

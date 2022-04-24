@@ -31,7 +31,16 @@
 
 
     if(isset($_SESSION['email']) && !empty($_SESSION['email'])){
-        $email = $_SESSION['email']; ?>
+        $email = $_SESSION['email']; 
+         
+        require_once('db_connect.php');   
+        // extract id from email
+        $query = "SELECT id FROM parking_owner WHERE email = '$email'";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
+        $PO_id = $row['id'];
+
+        ?>
 <body>
     <!-- animations -->
     <header class="header">
@@ -97,7 +106,10 @@
                     </div> -->
 
                     <p>Add your parking spot here</p>
-                    <button class="btn-grad1"><a href="POgarageAdd.php" class="hero1-btn mb-4">Add Here</a></button>
+                    <!-- <button class="btn-grad1"><a href="POgarageAdd.php" class="hero1-btn mb-4">Add Here</a></button> -->
+                    <?php
+                        echo "<a href = 'POgarageAdd.php?PO_id=$PO_id'> Add Here </a> </td>";
+                    ?>
                     
                 </div>
                 <!-- <div class="ideas-item bc-img">
@@ -119,6 +131,7 @@
 						<thead>
 							<tr class="table100-head">
 								<th class="column1">Date</th>
+                                <!-- <th class="column1"><?php echo  $PO_id; ?></th> -->
 								<th class="column2">Order ID</th>
 								<th class="column3">Name</th>
 								<th class="column4">Price</th>
