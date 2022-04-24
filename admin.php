@@ -405,7 +405,7 @@
                                                     Accounts Approval Pending</div>
                                                     <button class="h5 mb-0 font-weight-bold text-gray-800 " type="submit">
                                                         <a href="ParkingOwnerApproval.php"><?php echo $PO_Account_Pending; ?></a>
-                                                        </button>
+                                                    </button>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -423,10 +423,16 @@
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Parking spot  </div>
                                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                <?php
+                                                        $POquery2 = "SELECT * FROM `parking_owner` WHERE `status`='pending';";
+                                                        $POexecute_query2 = mysqli_query($conn,$POquery2);
+                                                        $PO_Garage_Pending = mysqli_num_rows($POexecute_query2);
+                                                        //echo $PO_Account_Pending;
+                                                ?>
                                                     Approval Pending </div>
                                                     <button class="h5 mb-0 font-weight-bold text-gray-800 " type="submit">
-                                                        <a href="ParkingSpotApproval.html">18</a>
-                                                        </button>
+                                                        <a href="ParkingOwnerApproval.php"><?php echo $PO_Garage_Pending; ?></a>
+                                                    </button>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
