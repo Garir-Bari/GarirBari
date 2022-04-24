@@ -424,7 +424,7 @@
                                                 Parking spot  </div>
                                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 <?php
-                                                        $POquery2 = "SELECT * FROM `parking_owner` WHERE `status`='pending';";
+                                                        $POquery2 = "SELECT * FROM `parking_garage` WHERE `status`='pending';";
                                                         $POexecute_query2 = mysqli_query($conn,$POquery2);
                                                         $PO_Garage_Pending = mysqli_num_rows($POexecute_query2);
                                                         //echo $PO_Account_Pending;
