@@ -15,9 +15,9 @@
     
 
     $query = "INSERT INTO parking_garage (id, POid, c_name, c_nid, contact, p_address, no_of_spot, rent_hour, PS_time, PE_time, cctv  status) 
-    VALUES('', '$PO_id', '$c_name', '$c_nid', '$phone', '$address', '$no_of_spot', '$rent_hour', '$PS_time', '$PE_time', '$cctv', 'pending');";
+    VALUES('', '$PO_id',  '$c_name', '$c_nid', '$phone', '$address', '$no_of_spot', '$rent_hour', '$PS_time', '$PE_time', '$cctv', 'pending');";
 
-    //$execute_query = mysqli_query($conn,$query);
+    $execute_query = mysqli_query($conn,$query);
 
     //?>
     <!-- <script>
