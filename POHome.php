@@ -147,15 +147,22 @@
                                 <th class="column6">Delete</th>
 							</tr>
 						</thead>
-						<tbody>
-								<tr>
-									<td class="column1">2017-09-29 01:22</td>
-									<td class="column2">200398</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
+						<?php
+                            $query = "SELECT * FROM parking_garage;";
+                            $result = mysqli_query($conn,$query); ?>
+                            <tbody> <?php
+                            if($result->num_rows>0){
+                                while($rd = mysqli_fetch_assoc($result)){
+                                    $id = $rd['id'];
+                                    $c_name = $rd['c_name'];
+                                    $c_nid = $rd['c_nid'];
+                                    $contact = $rd['contact'];
+                                    $p_address = $rd['p_address'];
+                                    $no_of_spot = $rd['no_of_spot'];
+                                    $rent_hour = $rd['rent_hour'];
+                                    $PS_time = $rd['PS_time'];
+                                    $PE_time = $rd['PE_time'];
+                                    $cctv = $rd['cctv']; ?>
 								
 								
 						</tbody>
