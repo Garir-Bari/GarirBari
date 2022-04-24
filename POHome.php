@@ -177,8 +177,8 @@
                                         <td class="column6"><?php echo $PE_time; ?></td>
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         <td class="column6"><?php echo $status; ?></td>
-                                        <td class="column6"><a href="PGApprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td>
-                                        <td class="column6"><a href="PGreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="Delete">Delete</a></td>
+                                        <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td>
+                                        <td class="column6"><a href="PGdelete.php?id=<?php echo $id; ?>"class="btn btn-info" name="Delete">Delete</a></td>
 								    </tr>
                                     
 
