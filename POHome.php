@@ -143,6 +143,7 @@
                                 <th class="column6">Parking start time</th>
                                 <th class="column6">Parking end time</th>
                                 <th class="column6">CCTV</th>
+                                <th class="column6">Status</th>
                                 <th class="column6">Edit</th>
                                 <th class="column6">Delete</th>
 							</tr>
@@ -162,10 +163,30 @@
                                     $rent_hour = $rd['rent_hour'];
                                     $PS_time = $rd['PS_time'];
                                     $PE_time = $rd['PE_time'];
-                                    $cctv = $rd['cctv']; ?>
-								
-								
-						</tbody>
+                                    $cctv = $rd['cctv'];
+                                    $status = $rd['status']; ?>
+
+<tr>
+                                        <td class="column1"><?php echo $c_name; ?></td>
+                                        <td class="column2"><?php echo $c_nid; ?></td>
+                                        <td class="column3"><?php echo $p_address; ?></td>
+                                        <td class="column4"><?php echo $contact; ?></td>
+                                        <td class="column5"><?php echo $no_of_spot; ?></td>
+                                        <td class="column6"><?php echo $rent_hour; ?></td>
+                                        <td class="column6"><?php echo $PS_time; ?></td>
+                                        <td class="column6"><?php echo $PE_time; ?></td>
+                                        <td class="column6"><?php echo $cctv; ?></td>
+                                        <td class="column6"><?php echo $status; ?></td>
+                                        <td class="column6"><a href="PGApprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td>
+                                        <td class="column6"><a href="PGreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="Delete">Delete</a></td>
+								    </tr>
+                                    
+
+                                <?php
+                                }
+                            }?>
+                            </tbody> <?php
+                        ?>
 					</table>
 				</div>
 			</div>
