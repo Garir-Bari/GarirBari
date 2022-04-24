@@ -62,7 +62,10 @@
                     <form action="POgarageAddProcess.php", method="POST">
                           <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?>> -->
                           <div class="row">
-                              <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?>">
+                              <?php
+                                 $PO_id = $_GET['PO_id'];
+                              ?>
+                              <input type="hidden"  name="PO_id" value='<?php echo $PO_id; ?>'>
                           </div>
                           <div class="row d-flex justify-content-center">
                               
