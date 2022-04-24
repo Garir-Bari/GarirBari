@@ -112,7 +112,7 @@
                                         <td class="column6"><?php echo $PS_time; ?></td>
                                         <td class="column6"><?php echo $PE_time; ?></td>
                                         <td class="column6"><?php echo $cctv; ?></td>
-                                        <td class="column6"><a href="PGapprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
+                                        <td class="column6"><a href="ParkingGarageApprove.php?id=<?php echo $id; ?>"class="btn btn-info" name="approve">Approve</a></td>
                                         <td class="column6"><a href="PGreject.php?id=<?php echo $id; ?>"class="btn btn-info" name="reject">Reject</a></td>
 								    </tr>
                                     
