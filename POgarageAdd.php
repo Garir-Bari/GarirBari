@@ -146,11 +146,11 @@
 
 
                    
-                                  <div class="col-xl-6	col-lg-12 col-md-12 ">
+                                  <!-- <div class="col-xl-6	col-lg-12 col-md-12 ">
                                      <div class="inputBox">
                                         <input type="file" placeholder="Add a garage picture", name="picture">
                                      </div>
-                                  </div>
+                                  </div> -->
 
                                </div>
                               
