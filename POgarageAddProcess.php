@@ -19,11 +19,11 @@
 
     $execute_query = mysqli_query($conn,$query);
 
-    //?>
-    <!-- <script>
-        window.location.assign('parkingownerlogin.php');
-    </script> -->
-    // <?php
+    ?>
+    <script>
+        window.location.assign('POHome.php');
+    </script>
+    <?php
     
 
 
