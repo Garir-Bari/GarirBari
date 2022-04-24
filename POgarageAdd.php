@@ -59,7 +59,7 @@
 
                     <!-- form area -->
 
-                    <form action="ParkingOwrocess.php", method="POST">
+                    <form action="POgarageAddProcess.php", method="POST">
                           <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?>> -->
                           <div class="row">
                               <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?>">
@@ -69,7 +69,7 @@
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
 
                                         <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?> >  -->
-                                        <input type="text" placeholder="Caretaker name", name='c_name'>
+                                        <input type="text" placeholder="Caretaker/Owner name", name='c_name'>
                                  
                                   </div>
                                   <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
