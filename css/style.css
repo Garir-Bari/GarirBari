@@ -347,6 +347,10 @@ nav .wrapper{
 
     /* hero */
 
+    .main-login{
+          border: 1px;
+    }
+
 .bc{
       background: linear-gradient(to top, #e7f3ea 0%, #e3eeff 99%, #e3eeff 100%);
      
@@ -387,7 +391,7 @@ nav .wrapper{
       border-radius: 1rem;
       border: 1px solid rgba( 255, 255, 255, 0.18 );
       /* margin-left: 150px; */
-      margin-top: 40px;
+      margin-top: 20px;
       padding: 13px 40px;
       text-align: center;
       text-transform: uppercase;
