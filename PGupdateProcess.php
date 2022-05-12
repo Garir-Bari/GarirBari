@@ -15,10 +15,13 @@
 
     
 
-    // $query = "INSERT INTO parking_garage (id, POid, c_name, c_nid, contact, p_address, no_of_spot, rent_hour, PS_time, PE_time, cctv , status) 
+     $query = "UPDATE parking_garage SET c_name=$c_name, c_nid=$c_nid, contact=$phone, p_address=$p_address, no_of_spot=$no_of_spot, 
+               rent_hour=$rent_hour, PS_time=$PS_time, PE_time=$PE_time, cctv=$cctv 
+               WHERE id= $id"
+     //(id, POid, c_name, c_nid, contact, p_address, no_of_spot, rent_hour, PS_time, PE_time, cctv , status) 
     // VALUES('', '$PO_id',  '$c_name', '$c_nid', '$phone', '$p_address', '$no_of_spot', '$rent_hour', '$PS_time', '$PE_time', '$cctv', 'pending');";
 
-    // $execute_query = mysqli_query($conn,$query);
+    $execute_query = mysqli_query($conn,$query);
     
     // if($execute_query){
     //     ?>
