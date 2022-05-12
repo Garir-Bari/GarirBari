@@ -1,17 +1,17 @@
 <?php 
     require_once('db_connect.php');
 
-    // $PO_id = $_POST['PO_id'];
-    // //echo $PO_id;
-    // $c_name = $_POST['c_name'];
-    // $c_nid = $_POST['c_nid'];
-    // $phone = $_POST['phone'];
-    // $p_address = $_POST['p_address'];
-    // $no_of_spot = $_POST['no_of_spot'];
-    // $rent_hour = $_POST['rent_hour'];
-    // $PS_time = $_POST['PS_time'];
-    // $PE_time = $_POST['PE_time'];
-    // $cctv = $_POST['cctv'];
+     $id = $_POST['id'];
+    // echo $PO_id;
+     $c_name = $_POST['c_name'];
+     $c_nid = $_POST['c_nid'];
+     $phone = $_POST['phone'];
+     $p_address = $_POST['p_address'];
+     $no_of_spot = $_POST['no_of_spot'];
+     $rent_hour = $_POST['rent_hour'];
+     $PS_time = $_POST['PS_time'];
+     $PE_time = $_POST['PE_time'];
+     $cctv = $_POST['cctv'];
 
     
 
