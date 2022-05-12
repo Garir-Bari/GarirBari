@@ -1,15 +1,15 @@
 <?php
     require_once('db_connect.php');
     $id = $_GET['id'];
-    $c_name = $_POST['c_name'];
-    $c_nid = $_POST['c_nid'];
-    $phone = $_POST['contact'];
-    $p_address = $_POST['p_address'];
-    $no_of_spot = $_POST['no_of_spot'];
-    $rent_hour = $_POST['rent_hour'];
-    $PS_time = $_POST['PS_time'];
-    $PE_time = $_POST['PE_time'];
-    $cctv = $_POST['cctv'];
+    $c_name = $_GET['c_name'];
+    $c_nid = $_GET['c_nid'];
+    $phone = $_GET['contact'];
+    $p_address = $_GET['p_address'];
+    $no_of_spot = $_GET['no_of_spot'];
+    $rent_hour = $_GET['rent_hour'];
+    $PS_time = $_GET['PS_time'];
+    $PE_time = $_GET['PE_time'];
+    $cctv = $_GET['cctv'];
     
 
 ?>
@@ -74,31 +74,38 @@
 
                     <!-- form area -->
 
-                    <form action="POgarageAddProcess.php", method="POST">
+                    <form action="PGupdateProcess.php", method="POST">
                           <div class="row d-flex justify-content-center">
+                                  <div class="row">
+                                        <input type="hidden"  name="id" value='<?php echo $id; ?>'>
+                                  </div>
                               
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
 
                                         <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?> >  -->
-                                        <input type="text" placeholder="Caretaker/Owner name", name='c_name'>
+                                        <label for="c_name">Caretaker/Owner Name</label><br>
+                                        <input type="text" placeholder="<?php echo $c_name; ?>", name='c_name'>
                                  
                                   </div>
                                   <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
-                                  
-                                  <input type="text" placeholder="Caretaker NID", name='c_nid'>
+                                         <label for="c_nid">NID</label><br>
+                                         <input type="text" placeholder="<?php echo $c_nid; ?>", name='c_nid'>
+                                         <!-- <input type="text" placeholder="Caretaker NID", name='c_nid'> -->
                                    
                                   </div>
                                </div>
        
                                <div class="row d-flex justify-content-center">
                                      <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                        
-                                           <input type="text" placeholder="Caretaker Contact number", name='phone'>
+                                          <label for="phone">Contact</label><br>
+                                          <input type="text" placeholder="<?php echo $phone; ?>", name='phone'>
+                                          <!-- <input type="text" placeholder="Caretaker Contact number", name='phone'> -->
                                     
                                      </div>
                                      <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
-                                     
-                                           <input type="text" placeholder="Parking Address", name='p_address'>
+                                          <label for="p_address">Address</label><br>
+                                          <input type="text" placeholder="<?php echo $p_address; ?>", name='p_address'>
+                                          <!-- <input type="text" placeholder="Parking Address", name='p_address'> -->
                                       
                                      </div>
                                   </div>
@@ -107,13 +114,15 @@
 
                                   <div class="row d-flex justify-content-center">
                                      <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
-                                        
-                                           <input type="number" placeholder="Number of parking spot", name='no_of_spot' min="1" max="1000">
+                                          <label for="no_of_spot">Number of parking spot</label><br>
+                                          <input type="number" placeholder="<?php echo $no_of_spot; ?>", name='no_of_spot' min="1" max="1000">
+                                          <!-- <input type="number" placeholder="Number of parking spot", name='no_of_spot' min="1" max="1000"> -->
                                     
                                      </div>
                                      <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
-                                     
-                                           <input type="number" placeholder="Rent per hour", name='rent_hour' min="10" max="1000">
+                                          <label for="rent_hour">Rent per hour</label><br>
+                                          <input type="number" placeholder="<?php echo $rent_hour; ?>", name='rent_hour' min="10" max="1000">
+                                           <!-- <input type="number" placeholder="Rent per hour", name='rent_hour' min="10" max="1000"> -->
                                       
                                      </div>
                                   </div>
@@ -125,7 +134,9 @@
 
                                   <div class="col-xl-6	col-lg-12 col-md-12 ">
                                      <div class="inputBox">
-                                        <input type="text" placeholder="Parking start time" step="900" onfocus="this.type='time'" name="PS_time">
+                                        <label for="PS_time">Parking start time</label><br>
+                                        <input type="text" placeholder="<?php echo $PS_time; ?>", step="900" onfocus="this.type='time'" name="PS_time">
+                                        <!-- <input type="text" placeholder="Parking start time" step="900" onfocus="this.type='time'" name="PS_time"> -->
                                         <!-- <input type="time" placeholder="Parking start time", name="PS_time"> -->
                                      </div>
                                   </div>
@@ -135,7 +146,9 @@
                    
                                   <div class="col-xl-6	col-lg-12 col-md-12 ">
                                      <div class="inputBox">
-                                         <input type="text" placeholder="Parking end time" step="900" onfocus="this.type='time'" name="PE_time">
+                                        <label for="PE_time">Parking end time</label><br>
+                                        <input type="text" placeholder="<?php echo $PE_time; ?>", step="900" onfocus="this.type='time'" name="PE_time">
+                                         <!-- <input type="text" placeholder="Parking end time" step="900" onfocus="this.type='time'" name="PE_time"> -->
                                      </div>
                                   </div>
 
@@ -145,8 +158,9 @@
                                   
 
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
+                                              <label for="cctv">CCTV</label><br>
                                               <select class="cs-select cs-skin-elastic ", name="cctv">
-                                                 <option value="" disabled selected>CCTV available</option>
+                                                 <option value="" disabled selected><?php echo $cctv; ?></option>
                                                  <option class="option" value="yes" data-class="element_1">Yes</option>
                                                  <option value="no" data-class="element_2">No</option>
                                               </select>
