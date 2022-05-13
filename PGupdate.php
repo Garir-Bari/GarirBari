@@ -84,12 +84,12 @@
 
                                         <!-- <input type="hidden"  name="PO_id" value="<?php echo $PO_id; ?> >  -->
                                         <label for="c_name">Caretaker/Owner Name</label><br>
-                                        <input type="text" placeholder="<?php echo $c_name; ?>", name='c_name'>
+                                        <input type="text" value="<?php echo $c_name; ?>", name='c_name'>
                                  
                                   </div>
                                   <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
                                          <label for="c_nid">NID</label><br>
-                                         <input type="text" placeholder="<?php echo $c_nid; ?>", name='c_nid'>
+                                         <input type="text" value="<?php echo $c_nid; ?>", name='c_nid'>
                                          <!-- <input type="text" placeholder="Caretaker NID", name='c_nid'> -->
                                    
                                   </div>
@@ -98,13 +98,13 @@
                                <div class="row d-flex justify-content-center">
                                      <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                           <label for="phone">Contact</label><br>
-                                          <input type="text" placeholder="<?php echo $phone; ?>", name='phone'>
+                                          <input type="text" value="<?php echo $phone; ?>", name='phone'>
                                           <!-- <input type="text" placeholder="Caretaker Contact number", name='phone'> -->
                                     
                                      </div>
                                      <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
                                           <label for="p_address">Address</label><br>
-                                          <input type="text" placeholder="<?php echo $p_address; ?>", name='p_address'>
+                                          <input type="text" value="<?php echo $p_address; ?>", name='p_address'>
                                           <!-- <input type="text" placeholder="Parking Address", name='p_address'> -->
                                       
                                      </div>
@@ -115,13 +115,13 @@
                                   <div class="row d-flex justify-content-center">
                                      <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                           <label for="no_of_spot">Number of parking spot</label><br>
-                                          <input type="number" placeholder="<?php echo $no_of_spot; ?>", name='no_of_spot' min="1" max="1000">
+                                          <input type="number" value="<?php echo $no_of_spot; ?>", name='no_of_spot' min="1" max="1000">
                                           <!-- <input type="number" placeholder="Number of parking spot", name='no_of_spot' min="1" max="1000"> -->
                                     
                                      </div>
                                      <div class="col-xl-6	col-lg-12 col-md-12  inputBox">
                                           <label for="rent_hour">Rent per hour</label><br>
-                                          <input type="number" placeholder="<?php echo $rent_hour; ?>", name='rent_hour' min="10" max="1000">
+                                          <input type="number" value="<?php echo $rent_hour; ?>", name='rent_hour' min="10" max="1000">
                                            <!-- <input type="number" placeholder="Rent per hour", name='rent_hour' min="10" max="1000"> -->
                                       
                                      </div>
@@ -135,7 +135,7 @@
                                   <div class="col-xl-6	col-lg-12 col-md-12 ">
                                      <div class="inputBox">
                                         <label for="PS_time">Parking start time</label><br>
-                                        <input type="text" placeholder="<?php echo $PS_time; ?>", step="900" onfocus="this.type='time'" name="PS_time">
+                                        <input type="text" value="<?php echo $PS_time; ?>", step="900" onfocus="this.type='time'" name="PS_time">
                                         <!-- <input type="text" placeholder="Parking start time" step="900" onfocus="this.type='time'" name="PS_time"> -->
                                         <!-- <input type="time" placeholder="Parking start time", name="PS_time"> -->
                                      </div>
@@ -147,7 +147,7 @@
                                   <div class="col-xl-6	col-lg-12 col-md-12 ">
                                      <div class="inputBox">
                                         <label for="PE_time">Parking end time</label><br>
-                                        <input type="text" placeholder="<?php echo $PE_time; ?>", step="900" onfocus="this.type='time'" name="PE_time">
+                                        <input type="text" value="<?php echo $PE_time; ?>", step="900" onfocus="this.type='time'" name="PE_time">
                                          <!-- <input type="text" placeholder="Parking end time" step="900" onfocus="this.type='time'" name="PE_time"> -->
                                      </div>
                                   </div>
@@ -160,7 +160,7 @@
                                   <div class="col-xl-6	col-lg-12 col-md-12 inputBox">
                                               <label for="cctv">CCTV</label><br>
                                               <select class="cs-select cs-skin-elastic ", name="cctv">
-                                                 <option value="" disabled selected><?php echo $cctv; ?></option>
+                                                 <option value="<?php echo $cctv; ?>" disabled selected><?php echo $cctv; ?></option>
                                                  <option class="option" value="yes" data-class="element_1">Yes</option>
                                                  <option value="no" data-class="element_2">No</option>
                                               </select>
