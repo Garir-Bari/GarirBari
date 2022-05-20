@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="about.html">Logout</a></li>
+                            <li><input type="button" class="btn_pos" value="Logout" id="logoutbtn"></li>
                         </ul>
 
                     
