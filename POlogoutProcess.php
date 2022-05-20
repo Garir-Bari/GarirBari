@@ -8,5 +8,5 @@
     unset($_SESSION['email']);
     session_destroy();
 
-    //echo "<script>window.location.assign('tenant_signin.php');</script>";
+    echo "<script>window.location.assign('tenant_signin.php');</script>";
 ?>
