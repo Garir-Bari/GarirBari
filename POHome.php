@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="about.html">Logout</a></li>
+                            <li><a href="POlogoutProcess.php">Logout</a></li>
                         </ul>
 
                     
