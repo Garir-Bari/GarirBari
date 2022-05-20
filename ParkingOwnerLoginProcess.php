@@ -9,17 +9,20 @@
 
     $query = "SELECT * FROM `parking_owner` WHERE email = '$email' AND pass  = '$pass';";
     $execute_query = mysqli_query($conn,$query);
-    //$result2 = mysqli_fetch_array($execute_query);
+    $result2 = mysqli_fetch_array($execute_query); // to extract status value
     $count=mysqli_num_rows($execute_query);
 
     if ($count > 0){
-        session_start();
-        $_SESSION['email']=$email;
-        ?>
-        <script>
-            window.location.assign('POHome.php');
-        </script>
-        <?php
+        if($result2['status']=='approved'){
+            session_start();
+            $_SESSION['email']=$email;
+            ?>
+            <script>
+                window.location.assign('POHome.php');
+            </script>
+            <?php
+        }
+        
 
     }else{
         echo 'unsuccessfull';
