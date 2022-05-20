@@ -21,6 +21,12 @@
                 window.location.assign('POHome.php');
             </script>
             <?php
+        }else{
+            ?>
+            <script>
+                window.location.assign('POwnerLoginNotApproved.php');
+            </script>
+            <?php
         }
         
 
