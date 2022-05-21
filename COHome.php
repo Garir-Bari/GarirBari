@@ -110,17 +110,15 @@
 						<thead>
                             <tr class="table100-head">
 								<th class="column1">Caretaker Name</th>
-								<th class="column2">NID</th>
 								<th class="column4">Address</th>
 								<th class="column5">Contact</th>
-								<th class="column6">No. of spot</th>
+								<th class="column6">Available Spot</th>
                                 <th class="column6">Rent/hour</th>
                                 <th class="column6">Parking start time</th>
                                 <th class="column6">Parking end time</th>
                                 <th class="column6">CCTV</th>
-                                <th class="column6">Status</th>
-                                <th class="column6">Edit</th>
-                                <th class="column6">Delete</th>
+                                <th class="column6">Park In</th>
+                                
 							</tr>
 						</thead>
 						<?php
@@ -131,29 +129,29 @@
                                 while($rd = mysqli_fetch_assoc($result)){
                                     $id = $rd['id'];
                                     $c_name = $rd['c_name'];
-                                    $c_nid = $rd['c_nid'];
+                                    //$c_nid = $rd['c_nid'];
                                     $contact = $rd['contact'];
                                     $p_address = $rd['p_address'];
-                                    $no_of_spot = $rd['no_of_spot'];
+                                    $available_spot = $rd['spot_available'];
                                     $rent_hour = $rd['rent_hour'];
                                     $PS_time = $rd['PS_time'];
                                     $PE_time = $rd['PE_time'];
                                     $cctv = $rd['cctv'];
-                                    $status = $rd['status']; ?>
+                                    //$status = $rd['status']; ?>
 
 <tr>
                                         <td class="column1"><?php echo $c_name; ?></td>
-                                        <td class="column2"><?php echo $c_nid; ?></td>
+                                        
                                         <td class="column3"><?php echo $p_address; ?></td>
                                         <td class="column4"><?php echo $contact; ?></td>
-                                        <td class="column5"><?php echo $no_of_spot; ?></td>
+                                        <td class="column5"><?php echo $available_spot; ?></td>
                                         <td class="column6"><?php echo $rent_hour; ?></td>
                                         <td class="column6"><?php echo $PS_time; ?></td>
                                         <td class="column6"><?php echo $PE_time; ?></td>
                                         <td class="column6"><?php echo $cctv; ?></td>
-                                        <td class="column6"><?php echo $status; ?></td>
+                                        
                                         <?php
-                                            echo "<td> <a href = 'PGupdate.php?id=$id&c_name=$c_name&c_nid=$c_nid&contact=$contact&p_address=$p_address&no_of_spot=$no_of_spot&rent_hour=$rent_hour&PS_time=$PS_time&PE_time=$PE_time&cctv=$cctv'> Update </a> </td>";
+                                            echo "<td> <a href = 'PGupdate.php?id=$id&c_name=$c_name&contact=$contact&p_address=$p_address&rent_hour=$rent_hour&PS_time=$PS_time&PE_time=$PE_time&cctv=$cctv'> Update </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
                                         <?php
