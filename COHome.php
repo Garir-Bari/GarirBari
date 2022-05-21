@@ -38,10 +38,10 @@
          
         require_once('db_connect.php');   
         // extract id from email
-        $query = "SELECT id FROM parking_owner WHERE email = '$email'";
+        $query = "SELECT id FROM driver_owner WHERE email = '$email'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
-        $PO_id = $row['id'];
+        $CO_id = $row['id'];
 
         ?>
 <body>
