@@ -18,13 +18,13 @@
             $_SESSION['email']=$email;
             ?>
             <script>
-                window.location.assign('POHome.php');
+                window.location.assign('COHome.php');
             </script>
             <?php
         }else{
             ?>
             <script>
-                window.location.assign('POwnerLoginNotApproved.php');
+                window.location.assign('COwnerLoginNotApproved.php');
             </script>
             <?php
         }
@@ -35,7 +35,7 @@
         //header('parkingownerlogin.php');
         ?>
         <script>
-            window.location.assign('parkingownerlogin.php');
+            window.location.assign('carOwnerLogin.php');
         </script>
         <?php
     }
