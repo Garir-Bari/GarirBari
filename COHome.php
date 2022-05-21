@@ -158,7 +158,7 @@
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         
                                         <?php
-                                            echo "<td> <a href = 'COParkingProcess.php?Garage_id=$Garage_id&available_spot=$available_spot&$Car_id=$$Car_id'> Park in </a> </td>";
+                                            echo "<td> <a href = 'COParkingProcess.php?Garage_id=$Garage_id&available_spot=$available_spot&$Car_id=$$Car_id&rent_hour=$rent_hour'> Park in </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
                                         
