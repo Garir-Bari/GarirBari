@@ -74,15 +74,15 @@
                                        
                                        
                                             <ul class="mega-links">
-                                                <li><a href="website.html">View</a></li>
-                                                <li><a href="wordpress.html">Edit Profile</a></li>
+                                                <li><a href="#">View</a></li>
+                                                <li><a href="#">Edit Profile</a></li>
                                             </ul>
                                        
                                        
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="POlogoutProcess.php">Logout</a></li>
+                            <li><a href="COlogoutProcess.php">Logout</a></li>
                         </ul>
 
                     
@@ -98,32 +98,7 @@
     <!-- PHP start -->
 
     <!-- hero section -->
-    <section class="bc">
-        <div class="container">
-            <div class="ideas-container">
-                <div class="ideas-item abtxt">
-                    <!-- <div class="hero1-h1">Wellcome <span class="true ">Rownok Mahbub</span>
-                        <h1>
-                          To  Your Profile
-                        </h1>
-                    </div> -->
-
-                    <p>Add your parking spot here</p>
-                    <!-- <button class="btn-grad1"><a href="POgarageAdd.php" class="hero1-btn mb-4">Add Here</a></button> -->
-                    <?php
-                        echo "<a href = 'POgarageAdd.php?PO_id=$PO_id'> Add Here </a> </td>";
-                    ?>
-                    
-                </div>
-                <!-- <div class="ideas-item bc-img">
-
-                    <img src="img/Rownok.png" style="margin-top: 120px;" alt="">
-
-                </div> -->
-            </div>
-        </div>
-
-    </section>
+    
 
 
     <div class="limiter">
@@ -131,7 +106,7 @@
 			<div class="wrap-table100">
 				<div class="table100">
 					<table>
-                    <p style="color:blue;text-align:center;"> Your Parking Garaga/Spot </p>
+                    <p style="color:blue;text-align:center;"> Park Your Car Here </p>
 						<thead>
                             <tr class="table100-head">
 								<th class="column1">Caretaker Name</th>

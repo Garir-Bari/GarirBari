@@ -12,11 +12,12 @@
     $PS_time = $_POST['PS_time'];
     $PE_time = $_POST['PE_time'];
     $cctv = $_POST['cctv'];
+    //$spot_available = $no_of_spot;
 
     
 
-    $query = "INSERT INTO parking_garage (id, POid, c_name, c_nid, contact, p_address, no_of_spot, rent_hour, PS_time, PE_time, cctv , status) 
-    VALUES('', '$PO_id',  '$c_name', '$c_nid', '$phone', '$p_address', '$no_of_spot', '$rent_hour', '$PS_time', '$PE_time', '$cctv', 'pending');";
+    $query = "INSERT INTO parking_garage (id, POid, c_name, c_nid, contact, p_address, no_of_spot, rent_hour, PS_time, PE_time, cctv , status, spot_available) 
+    VALUES('', '$PO_id',  '$c_name', '$c_nid', '$phone', '$p_address', '$no_of_spot', '$rent_hour', '$PS_time', '$PE_time', '$cctv', 'pending', '$no_of_spot');";
 
     $execute_query = mysqli_query($conn,$query);
     
