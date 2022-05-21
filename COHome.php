@@ -236,7 +236,7 @@
                                         
                                         <?php
                                             if($status == 'Parked'){
-                                                echo "<td> <a href = 'COParkingCheckout.php?id=$id&hour_rent=$hour_rent'> Checkout </a></td>";
+                                                echo "<td> <a href = 'COParkingCheckout.php?id=$id&hour_rent=$hour_rent&Gid=$Gid'> Checkout </a></td>";
                                             }
                                             else{
                                                 echo "<td> Completed</td>"; 
