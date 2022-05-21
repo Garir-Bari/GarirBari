@@ -7,10 +7,15 @@
     $rent_hour = $_GET['rent_hour'];
 
     // parking process
+    $date = date("d-m-Y");
+    $s_time = date("h:i:s");
+
+    $queryParking = "INSET INTO parking_info (id, Cid, Gid, start_time, date,  status, hour_rent) VALUES('', '$Car_id',  '$Garage_id', '$s_time', '$date', 'Parked', 'rent_hour';";
+    $ParkingGarageExecute = mysqli_query($conn,$queryParkingGarage);
     
     // updating spot number
     $queryParkingGarage = "UPDATE parking_garage SET spot_available =$available_spot-1 WHERE id = $Garage_id;";
-    $ParkingGarageExecute = mysqli_query($conn,$queryParkingGarage);
-    header("Location: POHome.php");
+    //$ParkingGarageExecute = mysqli_query($conn,$queryParkingGarage);
+    //header("Location: POHome.php");
 
 ?>
