@@ -151,13 +151,10 @@
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         
                                         <?php
-                                            echo "<td> <a href = 'PGupdate.php?id=$id&c_name=$c_name&contact=$contact&p_address=$p_address&rent_hour=$rent_hour&PS_time=$PS_time&PE_time=$PE_time&cctv=$cctv'> Update </a> </td>";
+                                            echo "<td> <a href = 'COParkingProcess.php?id=$id&c_name=$c_name&contact=$contact&p_address=$p_address&rent_hour=$rent_hour&PS_time=$PS_time&PE_time=$PE_time&cctv=$cctv'> Park in </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
-                                        <?php
-                                            echo "<td> <a href = 'PGdelete.php?id=$id'> Delete </a> </td>";
-                                        ?>
-                                        <!-- <td class="column6"><a href="PGdelete.php?id=<?php echo $id; ?>"class="btn btn-info" name="Delete">Delete</a></td> -->
+                                        
 								    </tr>
                                     
 
