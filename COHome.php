@@ -47,7 +47,7 @@
         $query5 = "SELECT id FROM car WHERE DOid  = '$CO_id'";
         $result5 = mysqli_query($conn, $query5);
         $row5 = mysqli_fetch_assoc($result5);
-        $Car_id = $row['id'];
+        $Car_id = $row5['id'];
 
 
         ?>
@@ -158,7 +158,7 @@
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         
                                         <?php
-                                            echo "<td> <a href = 'COParkingProcess.php?Garage_id=$Garage_id&available_spot=$available_spot&Car_id=$$Car_id&rent_hour=$rent_hour'> Park in </a> </td>";
+                                            echo "<td> <a href = 'COParkingProcess.php?Garage_id=$Garage_id&available_spot=$available_spot&Car_id=$Car_id&rent_hour=$rent_hour'> Park in </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
                                         
@@ -171,6 +171,90 @@
                             </tbody> <?php
                         ?>
 					</table>
+                    <!-- parking info table -->
+                    <br>
+                    <br>
+                    <table style = "border: 1px solid black;">
+                    <p style="color:blue;text-align:center;"> Your Parking Log </p>
+						<thead>
+                            <tr class="table100-head">
+                                <th class="column6">Garage ID</th>
+								<th class="column1">Date</th>
+								<th class="column4">Start Time</th>
+								<th class="column5">End Time</th>
+								<th class="column6">Hour Rent</th>
+                                <th class="column6">Total Rent</th>
+                                <th class="column6">Parking Status</th>
+                                <th class="column6">Check Out</th>
+                                
+							</tr>
+						</thead>
+						<?php
+                            $query7 = "SELECT * FROM parking_info where Cid=$Car_id;";
+                            $result7 = mysqli_query($conn,$query7); ?>
+                            <tbody> <?php
+                            if($result7->num_rows>0){
+                                while($rd7 = mysqli_fetch_assoc($result7)){
+                                    $id = $rd7['id'];
+
+                                    $start_time = $rd7['start_time'];
+                                    $end_time = $rd7['end_time'];
+                                    $pdate = $rd7['pdate'];
+                                    $rent = $rd7['rent'];
+                                    $status = $rd7['status'];
+                                    $hour_rent = $rd7['hour_rent'];
+                                    $Gid = $rd7['Gid'];
+                                    //$PE_time = $rd7['PE_time'];
+                
+                                    ?>
+                                    <tr>
+                                        <td class="column4"><?php echo $Gid;?></td>
+                                        <td class="column5"><?php echo $pdate; ?></td>
+                                        <td class="column6"><?php echo $start_time; ?></td>
+                                        <td class="column6">
+                                                 <?php 
+                                                       if($status == 'Parked'){
+                                                        echo 'On going';
+                                                       }
+                                                       else{
+                                                        echo $$end_time; 
+                                                       }
+                                                 ?>
+                                        </td>
+                                        <td class="column6"><?php echo $hour_rent; ?></td>
+                                        <td class="column6">
+                                                 <?php 
+                                                       if($status == 'Parked'){
+                                                        echo '-';
+                                                       }
+                                                       else{
+                                                        echo $rent; 
+                                                       }
+                                                 ?>
+                                        </td>
+                                        <td class="column6"><?php echo $status; ?></td>
+                                        
+                                        <?php
+                                            if($status == 'Parked'){
+                                                echo "<td> <a href = 'COParkingCheckout.php?id=$id&hour_rent'> Checkout </a></td>";
+                                            }
+                                            else{
+                                                echo 'Completed'; 
+                                            }
+
+                                        ?>
+                                        <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
+                                        
+								    </tr>
+                                    
+
+                                <?php
+                                }
+                            }?>
+                            </tbody> <?php
+                        ?>
+					</table>
+
 				</div>
 			</div>
 		</div>
