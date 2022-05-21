@@ -7,13 +7,13 @@
 
     $end_time = date("h:i:s");
 
-    $queryParking = "UPDATE parking_info SET end_time=$end_time, rent=$hour_rent, status='Completed';";
-    //$ParkingExecute = mysqli_query($conn,$queryParking);
+    $queryParking = "UPDATE parking_info SET end_time='$end_time', rent='$hour_rent', status='Completed' where id=$id;";
+    $ParkingExecute = mysqli_query($conn,$queryParking);
     
     
-    // if($ParkingExecute){
-    //     header("Location: COHome.php");
-    // }
+    if($ParkingExecute){
+         header("Location: COHome.php");
+    }
     
 
 ?>

@@ -217,7 +217,7 @@
                                                         echo 'On going';
                                                        }
                                                        else{
-                                                        echo $$end_time; 
+                                                        echo $end_time; 
                                                        }
                                                  ?>
                                         </td>
@@ -239,7 +239,7 @@
                                                 echo "<td> <a href = 'COParkingCheckout.php?id=$id&hour_rent=$hour_rent'> Checkout </a></td>";
                                             }
                                             else{
-                                                echo 'Completed'; 
+                                                echo "<td> Completed</td>"; 
                                             }
 
                                         ?>
