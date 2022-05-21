@@ -43,6 +43,13 @@
         $row = mysqli_fetch_assoc($result);
         $CO_id = $row['id'];
 
+        // extarct car id for car parking
+        $query5 = "SELECT id FROM car WHERE DOid  = '$CO_id'";
+        $result5 = mysqli_query($conn, $query5);
+        $row5 = mysqli_fetch_assoc($result5);
+        $Car_id = $row['id'];
+
+
         ?>
 <body>
     <!-- animations -->
@@ -151,7 +158,7 @@
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         
                                         <?php
-                                            echo "<td> <a href = 'COParkingProcess.php?id=$id&c_name=$c_name&contact=$contact&p_address=$p_address&rent_hour=$rent_hour&PS_time=$PS_time&PE_time=$PE_time&cctv=$cctv'> Park in </a> </td>";
+                                            echo "<td> <a href = 'COParkingProcess.php?id=$id&available_spot=$available_spot&cctv=$cctv'> Park in </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
                                         
