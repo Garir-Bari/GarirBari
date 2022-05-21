@@ -9,11 +9,11 @@
 
     $query2 = "SELECT * FROM `driver_owner` WHERE email = '$email' AND pass  = '$pass';";
     $execute_query = mysqli_query($conn,$query2);
-    $result2 = mysqli_fetch_array($execute_query); // to extract status value
+    $result4 = mysqli_fetch_array($execute_query); // to extract status value
     $count=mysqli_num_rows($execute_query);
 
     if ($count > 0){
-        if($result2['status']=='approved'){
+        if($result4['status']=='approved'){
             session_start();
             $_SESSION['email']=$email;
             ?>
