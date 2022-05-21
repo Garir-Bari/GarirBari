@@ -134,7 +134,7 @@
                             <tbody> <?php
                             if($result->num_rows>0){
                                 while($rd = mysqli_fetch_assoc($result)){
-                                    $id = $rd['id'];
+                                    $Garage_id = $rd['id'];
                                     $c_name = $rd['c_name'];
                                     //$c_nid = $rd['c_nid'];
                                     $contact = $rd['contact'];
@@ -158,7 +158,7 @@
                                         <td class="column6"><?php echo $cctv; ?></td>
                                         
                                         <?php
-                                            echo "<td> <a href = 'COParkingProcess.php?id=$id&available_spot=$available_spot&cctv=$cctv'> Park in </a> </td>";
+                                            echo "<td> <a href = 'COParkingProcess.php?Garage_id=$Garage_id&available_spot=$available_spot&$Car_id=$$Car_id'> Park in </a> </td>";
                                         ?>
                                         <!-- <td class="column6"><a href="PGedit.php?id=<?php echo $id; ?>"class="btn btn-info" name="Edit">Edit</a></td> -->
                                         
