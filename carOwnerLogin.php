@@ -65,7 +65,7 @@
                   </div>
                   <div class="col-xl-6 col-xxl-6 col-md-12 col-sm-12 row d-flex justify-content-center">
                         <div class="card ">
-                              <h2 class="text-center">Login As Car Owner</h2>
+                              <h2 class="text-center">Login As Driver</h2>
                               <form action="#">
                                 <div class="inputBox">
                                   <input type="text" placeholder="Username">
