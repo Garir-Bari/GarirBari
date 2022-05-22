@@ -27,7 +27,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <title>RomaxDev</title>
+    <title>Home Parking Owner</title>
 </head>
 <?php
     session_start();

@@ -68,13 +68,13 @@
                               <h2 class="text-center">Login As Parking Owner</h2>
                               <form action="ParkingOwnerLoginProcess.php" method="POST">
                                 <div class="inputBox">
-                                  <input type="text" placeholder="UserEmail" name="email">
+                                  <input type="text" placeholder="UserEmail" name="email" id="logMain_UserName">
                                 </div>
                                 <div class="inputBox">
-                                  <input type="password" placeholder="Password" name="password">
+                                  <input type="password" placeholder="Password" name="password" id="logMain_Password">
                                 </div>
                                 <div class="inputBox text-center">
-                                    <button class="btn ">Submit</button>
+                                    <button class="btn" name="logMain_Button1">Submit</button>
                                 </div>
                                 <p class="forget">Don't have account ? <a href="parkingownersignup.html">Sign Up</a></p>
                               </form>
