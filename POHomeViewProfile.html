@@ -15,15 +15,6 @@
 			  padding: 10px;
 
             }
-            #home{
-              margin: 0;
-			  position: absolute;
-			  top: 95%;
-			  left: 48%;
-			  background-color: green;
-			  font-size: 25px;
-			  padding: 10px;
-            }
 			#p1{
 				text-align: center;
 				color: black;
@@ -111,10 +102,14 @@
 				let p1 = document.querySelector("#p1");
 				let p2 = document.querySelector("#p2");
 				let p3 = document.querySelector("#p3");
+                let p4 = document.querySelector("#p4");
+                let p5 = document.querySelector("#p5");
 			
-				p2.innerHTML ="Patient name is: " + json['content'][0]['patient_name'];
-				p3.innerHTML ="Patient email is: " +  json['content'][0]['email'];
-				p4.innerHTML ="Patient age is: " +  json['content'][0]['age'];	
+				p2.innerHTML ="Your name: " + json['content'][0]['name'];
+				p3.innerHTML ="Your email: " +  json['content'][0]['email'];
+				p4.innerHTML ="Contact Number: " +  json['content'][0]['contact'];	
+                p5.innerHTML ="Your Address: " + json['content'][0]['address'];
+                p6.innerHTML ="Your Occupation: " + json['content'][0]['occupation'];
 				
 				
 				
