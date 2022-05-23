@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>View Profile</title>
+		<style type="text/css">
+			body {
+                background-image: url("a.jpg");
+            }
+            #btnchange{
+              margin: 0;
+			  position: absolute;
+			  top: 22%;
+			  left: 42%;
+			  background-color: green;
+			  font-size: 25px;
+			  padding: 10px;
+
+            }
+			#p1{
+				text-align: center;
+				color: black;
+				font-size: 40px;
+				font-weight: bold;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: pink;
+				padding: 30px;
+			}
+			#p2{
+				color: white;
+				font-size: 25px;
+				margin-top: 110px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+			#p3{
+				color: white;
+				font-size: 25px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+			#p4{
+				color: white;
+				font-size: 25px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+			#p5{
+				color: white;
+				font-size: 25px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				margin-left: 90px;
+				margin-right: 90px;
+				background-color: orange;
+				padding: 30px;
+			}
+            
+		</style>
+	</head>
+	<body>
+		<div><button id="btnChange">Click to View Car Details</button></div>	
+		<div id="p1">Your Car Details</div>
+		<p id="p2">Model</p>
+		<p id="p3">Color</p>
+		<p id="p4">Chassis</p>
+		<p id="p5">License</p>
+        <br>
+
+		<a href="COHome.php"><input id="home" style="background-color: orange;" type="button" name="" value="Home"></a>
+	<script>
+
+		let btnChange = document.querySelector("#btnChange");
+	
+		btnChange.addEventListener('click', () => {
+		let id = prompt("Please enter Owner ID:");
+		fetch('http://localhost/garirbari/COHomeCarDetailsProcess.php?id='+id)
+			.then(response => response.json())
+			.then(json => {
+				let p1 = document.querySelector("#p1");
+				let p2 = document.querySelector("#p2");
+				let p3 = document.querySelector("#p3");
+                let p4 = document.querySelector("#p4");
+                
+			
+				p2.innerHTML ="Your Car Model: " + json['content'][0]['	model'];
+				p3.innerHTML ="Your Car Color: " +  json['content'][0]['color'];
+				p4.innerHTML ="Chassis Number: " +  json['content'][0]['chassis'];	
+                p5.innerHTML ="License Number: " + json['content'][0]['license'];
+                
+				
+			})
+		});
+
+	</script>
+	</body>
+</html>
