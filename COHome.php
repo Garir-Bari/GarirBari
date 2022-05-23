@@ -65,9 +65,8 @@
                     <input type="radio" name="slide" id="cancel-btn">
                     <ul class="nav-links">
                         <ul class="nav-links">
-                            <label for="cancel-btn" class="btn cancel-btn"> <i class="fas fa-times"></i>
-                                        </label>
-                          
+                            <label for="cancel-btn" class="btn cancel-btn"> <i class="fas fa-times"></i> </label>
+                            <li><a href="COHomeCarDetails.html">Your Car</a></li>
                             <li><a href="" class="desktop-item">Profile
                                                     <i class="fas fa-chevron-down" id="arrowDown"
                                                           style=" font-size: 18px;"></i>
