@@ -74,7 +74,7 @@
                                        
                                        
                                             <ul class="mega-links">
-                                                <li><a href="website.html">View</a></li>
+                                                <li><a href="POHomeViewProfile.html">View</a></li>
                                                 <li><a href="wordpress.html">Edit Profile</a></li>
                                             </ul>
                                        
