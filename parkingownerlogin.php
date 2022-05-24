@@ -74,7 +74,8 @@
                                   <input type="password" placeholder="Password" name="password" id="logMain_Password">
                                 </div>
                                 <div class="inputBox text-center">
-                                    <button class="btn" name="logMain_Button1">Submit</button>
+                                    <!-- <button class="btn" type="submit" name="logMain_Button1" id="logMain_Button1">Submit</button> -->
+                                    <input type="submit" class="btn" value="Submit" id="logMain_Button">
                                 </div>
                                 <p class="forget">Don't have account ? <a href="parkingownersignup.html">Sign Up</a></p>
                               </form>
